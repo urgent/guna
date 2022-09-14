@@ -241,11 +241,19 @@ header {
 
 #team-cards {
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     gap: 30px;
     margin-top: 8rem;
+    overflow-x: scroll;
+    cursor: grab;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
+
+#team-cards::-webkit-scrollbar {
+    display: none;
+  }
 
 #team div, #team .card-text {
     font-family: Archivo;
@@ -266,6 +274,7 @@ header {
     width: 21rem;
     height: 36rem;
     padding: 20px;
+    min-width: 210px;
 }
 
 #team .card img {
@@ -273,9 +282,17 @@ header {
     border-radius: 2.5rem;
 }
 
+#team .card #card-social a img {
+    width:2rem;
+    border-radius:0;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(96%) contrast(104%);
+    margin-right:1rem;
+}
+
 #team-background {
     position: absolute;
     width: 100%;
+    z-index: -1;
 }
 #team-background-circle {
     position: relative;
@@ -298,11 +315,18 @@ header {
 
 #partners-cards {
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     gap: 4rem;
     margin-top: 8rem;
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
+
+#partners-cards::-webkit-scrollbar {
+    display: none;
+  }
 
 #partners div, #partners .card-text {
     font-family: Archivo;
@@ -310,21 +334,29 @@ header {
 
 #partners .card-text {
     margin: 2rem 0;
+    text-align: center;;
+}
+
+#partners .card .card-text img {
+    width: 2rem;
+    height: 2rem;
+    border-radius:0;
 }
 
 #partners h5 {
     font-family: ArchivoBold;
     margin-top: 3rem;
+    text-align: center;
 }
 
 #partners .card {
-    width: 21rem;
+    width: 22rem;
     height: 36rem;
     padding: 2rem;
 }
 
 #partners .card img {
-    width:17rem;
+    height:17rem;
     border-radius: 2.5rem;
 }
 
