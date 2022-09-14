@@ -3,6 +3,16 @@
     src: url("fonts/GRIFTER Bold 700.otf") format("opentype");
 }
 
+@font-face {
+    font-family: Archivo;
+    src: url("fonts/archivo.regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: ArchivoBold;
+    src: url("fonts/archivo.bold.ttf") format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +24,12 @@
     font-family: Grifter, sans, monospace;
 }
 
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    color: #333;
+    overflow-x: hidden;
+}
 
 h1 {
     margin-top: 10rem;
@@ -65,12 +81,282 @@ header {
 }
 
 #btf {
-    width: 68rem;
     margin-top: 26rem;
-    margin-left:15.7rem;
+    display: grid;
+    grid-template-columns: [spacer] 15.7rem [text] 68rem [circles-spacer] 9.6rem [circles] auto;
+}
+
+#btf-spacer {
+    grid-column: spacer;
 }
 
 #btf h3{
     font-size: 5rem;
     line-height: 120%;
+}
+
+#btf-circles-spacer {
+    grid-column: circles-spacer;
+}
+
+#btf-circles {
+    display:grid;
+    grid-template-rows: [top] auto [bottom] auto;
+    grid-template-columns: [left] 18.1rem [right] 18.1rem;
+}
+
+#btf-left-circle {
+    grid-column: left;
+    grid-row: top;
+    background: linear-gradient(355.34deg, rgba(255, 255, 255, 0.5) 0.32%, rgba(252, 253, 255, 0.6397) 26.24%, rgba(243, 244, 255, 0.7353) 44%, rgba(228, 231, 255, 0.8178) 59.31%, rgba(206, 211, 255, 0.8929) 73.24%, rgba(179, 187, 255, 0.9622) 86.11%, #A0AAFF 93.12%);
+    transform: rotate(135deg);
+    width: 18rem;
+    height: 18rem;
+    border-radius: 9rem;
+}
+
+#btf-right-circle {
+    grid-column: right;
+    grid-row: top;
+    background: linear-gradient(355.34deg, rgba(255, 255, 255, 0.5) 0.32%, rgba(252, 253, 255, 0.6397) 26.24%, rgba(243, 244, 255, 0.7353) 44%, rgba(228, 231, 255, 0.8178) 59.31%, rgba(206, 211, 255, 0.8929) 73.24%, rgba(179, 187, 255, 0.9622) 86.11%, #A0AAFF 93.12%);
+    transform: rotate(135deg);
+    width: 18rem;
+    height: 18rem;
+    border-radius: 9rem;
+}
+
+#btf-bottom-circle {
+    grid-column: 1 / -1;
+    grid-row: bottom;
+    background: linear-gradient(355.34deg, rgba(255, 255, 255, 0.5) 0.32%, rgba(252, 253, 255, 0.6397) 26.24%, rgba(243, 244, 255, 0.7353) 44%, rgba(228, 231, 255, 0.8178) 59.31%, rgba(206, 211, 255, 0.8929) 73.24%, rgba(179, 187, 255, 0.9622) 86.11%, #A0AAFF 93.12%);
+    transform: rotate(-60deg);
+    width: 18rem;
+    height: 18rem;
+    border-radius: 9rem;
+    justify-self: center;
+}
+
+#video video {
+    width: 66rem;
+    margin: 10rem auto 20rem;
+    display: block;
+    border-radius: 2rem;
+}
+
+#cta {
+    position: relative;
+}
+
+#cta h6 {
+    margin-left: 4rem;
+    color: #CA92FF;
+    font-size: 3.8rem;
+    width:77.6rem;
+    position: relative;
+    z-index:1;
+}
+
+#cta h2 {
+    margin-left: 4rem;
+    font-size: 9rem;
+    line-height: 110%;
+    width:89rem;
+    position: relative;
+    z-index:1;
+}
+
+#cta-background {
+    position:absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+}
+
+#cta-yellow-circle {
+    background: #FFE84E;
+    filter: blur(150px);
+    width: 66rem;
+    height: 66rem;
+    border-radius: 33rem;
+    top: -100px;
+    position: absolute;
+    right: 0;
+    z-index: 0;
+}
+
+#cta-half-circles {
+    position: relative;
+    top: 130px;
+    left: -60px;
+}
+
+#cta-half-circle {
+    transform: translate(-50%, -50%);
+    height: 115px;
+    width: 230px;
+    border-radius: 0 0 230px 230px;
+    background:radial-gradient(93.7% 185.57% at -20% 0%, #CA92FF 0%, rgba(255, 232, 78, 0) 100%);
+}
+
+#cta-half-circle-flip {
+    transform: translate(-50%, -50%);
+    height: 115px;
+    width: 230px;
+    border-radius: 0 0 230px 230px;
+    background:radial-gradient(104.7% 197.57% at 19% 30%, rgba(255, 232, 78, 0) 30%, #CA92FF 100%);
+}
+
+#filmstrip {
+    position: relative;
+}
+
+#filmstrip-row {
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 2px;
+    transform: rotate(-4deg);
+    left: -270px;
+    top: 200px;
+
+}
+
+#filmstrip-row div {
+    width: 130px;
+    height: 124px;
+    background: #CA92FF;
+    border-radius: 8px;    
+}
+
+#team {
+    margin-top:480px;
+}
+
+#team h2 {
+    font-size: 9rem;
+    line-height: 110%;
+}
+
+#team-cards {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 8rem;
+}
+
+#team div, #team .card-text {
+    font-family: Archivo;
+}
+
+#team .card-text {
+    margin: 20px 0;
+}
+
+#team h5 {
+    font-family: ArchivoBold;
+    margin-top: 30px;
+}
+
+#team .card {
+    border: 1px solid #CAE893;
+    border-radius: 30px;
+    width: 21rem;
+    height: 36rem;
+    padding: 20px;
+}
+
+#team .card img {
+    width:17rem;
+    border-radius: 2.5rem;
+}
+
+#team-background {
+    position: absolute;
+    width: 100%;
+}
+#team-background-circle {
+    position: relative;
+    margin: 14rem auto;
+    width: 400px;
+    height: 400px;
+    background: #CAE893;
+    filter: blur(10rem);
+    border-radius: 20rem;
+}
+
+#partners {
+    margin-top: 20rem;
+}
+
+#partners h2 {
+    font-size: 9rem;
+    line-height: 110%;
+}
+
+#partners-cards {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+    margin-top: 8rem;
+}
+
+#partners div, #partners .card-text {
+    font-family: Archivo;
+}
+
+#partners .card-text {
+    margin: 2rem 0;
+}
+
+#partners h5 {
+    font-family: ArchivoBold;
+    margin-top: 3rem;
+}
+
+#partners .card {
+    width: 21rem;
+    height: 36rem;
+    padding: 2rem;
+}
+
+#partners .card img {
+    width:17rem;
+    border-radius: 2.5rem;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    display: grid;
+    grid-template-columns: [logo] 3fr [buttons] 4fr [icons] auto [copyright] 1fr;
+    background: #A0AAFF;
+}
+
+#footer-top-corners {
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 3rem;
+    border-radius: 0 0 30px 30px;
+}
+
+#footer-logo {
+    grid-column: logo;
+}
+
+#footer-buttons {
+    grid-column: buttons;
+}
+
+#footer-icons {
+    grid-column: icons;
+}
+
+#footer-copyright {
+    grid-column: copyright;
 }
