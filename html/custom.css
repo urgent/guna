@@ -38,10 +38,6 @@ h1 {
     max-width:124rem;
 }
 
-header {
-    display:none;
-}
-
 #hero-background {
     position:absolute;
     z-index:-1;
@@ -224,10 +220,21 @@ header {
 }
 
 #filmstrip-row div {
-    width: 130px;
-    height: 124px;
+    height: 12.5rem;
     background: #CA92FF;
-    border-radius: 8px;    
+    border-radius: .8rem;    
+    padding: 1.5rem;
+}
+
+#filmstrip-row p {
+    font-size: 2.4rem;
+    line-height: 100%;
+    color: #333333;
+}
+
+#filmstrip-row img {
+    margin-top:2rem;
+    height: 3.5rem;
 }
 
 #team {
@@ -391,4 +398,45 @@ footer {
 
 #footer-copyright {
     grid-column: copyright;
+}
+
+#social-media {
+    position: absolute;
+    top: 3rem;
+    right: 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .7rem 1rem;
+    gap: 1.5rem;
+    width: 25rem;
+    height: 3rem;
+    background: #FFFFFF;
+    border-radius: .8rem;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    justify-content: center;
+}
+
+#social-media img {
+    height: 1.5rem
+}
+
+#join {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 6rem;
+    outline: 2px solid white;
+    background: white;
+    outline-offset: 2px;
+    position: absolute;
+    bottom: 14rem;
+    right: 40%;
+    font-size: 24px;
+    line-height: 110%;
+    text-align: center;
+    color: #A0AAFF;
+    transform: rotate(-30deg);
+    padding-top:45px;
 }
