@@ -547,6 +547,10 @@ footer {
         grid-template-columns: [logo] 1fr [icons] 2fr [copyright] 1fr;
     }
 
+    #footer-icons, #footer-copyright {
+        margin-top: 40px;
+    }
+
     #footer-top-corners {
         top: -3px;
     }
